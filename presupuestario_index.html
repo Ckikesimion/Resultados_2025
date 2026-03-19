@@ -42,6 +42,47 @@
             padding: 0;
             margin: 0;
         }
+	/* AJUSTE PARA MÓVILES */
+@media (max-width: 600px) {
+    #map {
+        height: 85vh !important; /* Reduce el alto para dejar espacio abajo */
+    }
+    /* Hace que los botones de navegación se pongan uno sobre otro */
+    div[style*="display: flex"] {
+        flex-direction: column !important;
+        top: 130px !important; 
+        gap: 8px !important;
+    }
+    /* Ajusta el tamaño del cuadro de descripción */
+    div[style*="max-width: 280px"] {
+        max-width: 180px !important;
+        font-size: 11px !important;
+        left: 10px !important;
+    }
+}
+	/* --- AJUSTE DINÁMICO PARA CELULARES --- */
+@media (max-width: 600px) {
+    /* 1. Achicamos el mapa un poco para que no se desborde */
+    #map {
+        height: 80vh !important; 
+    }
+
+    /* 2. Los botones de 'Ver Físico/Presupuestario' se ponen uno sobre otro */
+    /* Buscamos el div que tiene el ID o el estilo de los botones */
+    div[style*="display: flex"] {
+        flex-direction: column !important;
+        top: 130px !important; /* Los bajamos para que no tapen el logo */
+        gap: 5px !important;
+    }
+
+    /* 3. El cuadro de texto informativo se hace más pequeño y transparente */
+    div[style*="max-width: 280px"] {
+        max-width: 160px !important;
+        font-size: 10px !important;
+        padding: 8px !important;
+        background: rgba(255, 255, 255, 0.8) !important;
+    }
+}
         </style>
         <title></title>
     </head>
