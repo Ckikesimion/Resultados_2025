@@ -42,49 +42,37 @@
             padding: 0;
             margin: 0;
         }
-	/* AJUSTE PARA MÓVILES */
-@media (max-width: 600px) {
-    #map {
-        height: 85vh !important; /* Reduce el alto para dejar espacio abajo */
-    }
-    /* Hace que los botones de navegación se pongan uno sobre otro */
-    div[style*="display: flex"] {
-        flex-direction: column !important;
-        top: 130px !important; 
-        gap: 8px !important;
-    }
-    /* Ajusta el tamaño del cuadro de descripción */
-    div[style*="max-width: 280px"] {
-        max-width: 180px !important;
-        font-size: 11px !important;
-        left: 10px !important;
-    }
-}
-	/* --- AJUSTE DINÁMICO PARA CELULARES --- */
-@media (max-width: 600px) {
-    /* Título principal más pequeño */
-    div[style*="top: 10px; left: 10px"] {
+	@media (max-width: 600px) {
+    /* 1. EL TÍTULO DEL MAPA (El que se prende y apaga) */
+    /* Lo bajamos un poco más para que no choque con los botones de la izquierda */
+    div[id^="titulo-"] { 
+        top: 180px !important; /* Ajusta este número si aún toca los botones */
+        width: 80% !important;
         padding: 5px !important;
-        max-width: 150px !important;
     }
-    h1 { font-size: 12px !important; }
+    div[id^="titulo-"] h1 { font-size: 14px !important; }
 
-    /* Los botones de cambio de mapa más compactos */
-    div[style*="display: flex"] {
-        top: 110px !important; /* Los subimos un poquito */
-        gap: 4px !important;
-    }
-    a[style*="padding: 10px 15px"] {
-        padding: 6px 10px !important;
-        font-size: 10px !important;
-    }
-
-    /* El cuadro informativo: lo movemos al fondo o lo hacemos más pequeño */
+    /* 2. CUADRO INFORMATIVO EXTENDIDO ABAJO */
+    /* Quitamos el centrado vertical (top 50%) y lo pegamos al fondo */
     div[style*="max-width: 280px"] {
         top: auto !important;
-        bottom: 50px !important; /* Lo mandamos abajo para que no tape el centro del mapa */
-        max-width: 140px !important;
-        font-size: 9px !important;
+        bottom: 20px !important; /* Distancia desde el borde inferior */
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 auto !important; /* Lo centra horizontalmente */
+        max-width: 90% !important; /* Se extiende a casi todo el ancho */
+        width: 90% !important;
+        transform: none !important; /* Eliminamos el desplazamiento anterior */
+        font-size: 11px !important;
+        padding: 10px !important;
+        background: rgba(255, 255, 255, 0.9) !important; /* Un poco más sólido para leer mejor */
+    }
+
+    /* 3. BOTONES DE NAVEGACIÓN */
+    /* Aseguramos que los botones no tapen el logo o el título superior */
+    div[style*="display: flex"] {
+        top: 100px !important;
+        gap: 5px !important;
     }
 }
         </style>
