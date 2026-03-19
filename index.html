@@ -62,25 +62,29 @@
 }
 	/* --- AJUSTE DINÁMICO PARA CELULARES --- */
 @media (max-width: 600px) {
-    /* 1. Achicamos el mapa un poco para que no se desborde */
-    #map {
-        height: 80vh !important; 
+    /* Título principal más pequeño */
+    div[style*="top: 10px; left: 10px"] {
+        padding: 5px !important;
+        max-width: 150px !important;
     }
+    h1 { font-size: 12px !important; }
 
-    /* 2. Los botones de 'Ver Físico/Presupuestario' se ponen uno sobre otro */
-    /* Buscamos el div que tiene el ID o el estilo de los botones */
+    /* Los botones de cambio de mapa más compactos */
     div[style*="display: flex"] {
-        flex-direction: column !important;
-        top: 130px !important; /* Los bajamos para que no tapen el logo */
-        gap: 5px !important;
+        top: 110px !important; /* Los subimos un poquito */
+        gap: 4px !important;
+    }
+    a[style*="padding: 10px 15px"] {
+        padding: 6px 10px !important;
+        font-size: 10px !important;
     }
 
-    /* 3. El cuadro de texto informativo se hace más pequeño y transparente */
+    /* El cuadro informativo: lo movemos al fondo o lo hacemos más pequeño */
     div[style*="max-width: 280px"] {
-        max-width: 160px !important;
-        font-size: 10px !important;
-        padding: 8px !important;
-        background: rgba(255, 255, 255, 0.8) !important;
+        top: auto !important;
+        bottom: 50px !important; /* Lo mandamos abajo para que no tape el centro del mapa */
+        max-width: 140px !important;
+        font-size: 9px !important;
     }
 }
         </style>
