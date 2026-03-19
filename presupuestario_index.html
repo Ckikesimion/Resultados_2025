@@ -75,6 +75,21 @@
         top: 100px !important;
         gap: 5px !important;
     }
+	/* 1. BAJAR EL LOGO / ISOTIPO (Esquina inferior izquierda) */
+    div[style*="bottom: 10px; left: 10px"] {
+        bottom: -50px !important; /* Lo bajamos fuera del área de traslape */
+    }
+
+    /* 2. BAJAR LA FIRMA "kike" (Esquina inferior derecha) */
+    div[style*="bottom: 10px; right: 20px"] {
+        bottom: -50px !important; /* Lo bajamos para que respire */
+    }
+
+    /* 3. AJUSTE DE MARGEN INFERIOR EN EL CUADRO INFORMATIVO */
+    /* Asegúrate de que el cuadro informativo tenga un margen cómodo */
+    div[style*="max-width: 280px"] {
+        bottom: 20px !important; /* Regresamos a un valor bajo pero seguro */
+    }
 }
         </style>
         <title></title>
