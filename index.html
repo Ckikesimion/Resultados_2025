@@ -75,20 +75,19 @@
         top: 100px !important;
         gap: 5px !important;
     }
-	/* 1. BAJAR EL LOGO / ISOTIPO (Esquina inferior izquierda) */
-    div[style*="bottom: 100px; left: 10px"] {
-        bottom: -50px !important; /* Lo bajamos fuera del área de traslape */
+	/* BAJAR EL LOGO / ROSA DE LOS VIENTOS */
+    div[style*="bottom: 10px; left: 10px"] {
+        bottom: -40px !important; /* Valor negativo para "sacarlo" del área del cuadro */
     }
 
-    /* 2. BAJAR LA FIRMA "kike" (Esquina inferior derecha) */
+    /* BAJAR LA FIRMA KIKE */
     div[style*="bottom: 10px; right: 20px"] {
-        bottom: -50px !important; /* Lo bajamos para que respire */
+        bottom: -40px !important;
     }
 
-    /* 3. AJUSTE DE MARGEN INFERIOR EN EL CUADRO INFORMATIVO */
-    /* Asegúrate de que el cuadro informativo tenga un margen cómodo */
-    div[style*="max-width: 280px"] {
-        bottom: 20px !important; /* Regresamos a un valor bajo pero seguro */
+    /* BAJAR EL TEXTO DE FUENTE */
+    div[style*="bottom: 15px"] {
+        bottom: -40px !important;
     }
 }
         </style>
